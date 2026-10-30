@@ -1,0 +1,9 @@
+project: savantenvs/radiolib
+target: fuzz_lorawan_downlink
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_lorawan_downlink/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_lorawan_downlink
+    libfuzzer: true
+    timeout: 10
